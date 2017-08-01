@@ -1,0 +1,37 @@
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular1</title>
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="angular.js"></script>
+  </head>
+  <body>
+    <div class="container well">
+    Name:<input ng-model="name" type="text"/>
+    Hello {{name}}
+    </div>
+    <div class="container well">
+    Name:<input ng-model="name1" type="text"/>
+    <br>
+    Name:<input ng-model="name1" type="text"/>
+    <br>
+    Name:<input ng-model="name1" type="text"/>
+    <br>
+    Hello {{name1}}
+    </div>
+    <div class="container well">
+    First name:<input ng-model="firstName" type="text"/>
+    <br>
+    Last name:<input ng-model="lastName" type="text"/>
+    <br>
+    Hello {{firstName}} {{lastName}}
+    </div>
+  </body>
+</html>

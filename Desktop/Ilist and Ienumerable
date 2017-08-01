@@ -1,0 +1,47 @@
+IEnumerable<T> is the base interface that the following extend or implement. It doesn't allow for direct access and is readonly. So use this only if you intend to iterate over the collection.
+ICollection<T> extendsIEnumerable<T> but in addition allows for adding, removing, testing whether an element is present in the collection and getting the total number of elements. It doesn't allow for directly accessing an element by index. That would be an O(n) operation as you need to start iterating over it until you find the corresponding element.
+IList<T> extends ICollection<T> (and thus it inherits all its properties) but in addition allows for directly accessing elements by index. It's an O(1) operation.
+List<T> is just a concrete implementation of the IList<T> interface.
+add-migration ColumnFirst_Name
+update-database
+
+
+MVVM(Model,View,ViewModel)Pattern
+The Knockout library uses the Model-View-ViewModel (MVVM) pattern:+
+
+The model is the server-side representation of the data in the business domain (in our case, books and authors).
+The view is the presentation layer (HTML).
+
+The view model is a JavaScript object that holds the models. 
+
+The view model is a code abstraction of the UI. It has no knowledge of the HTML representation. Instead, it represents abstract features of the view, such as "a list of books".The view model also provides implementations of commands that a user of the application initiates in the view. For example, when a user clicks a button in the UI, that action can trigger a command in the view model. The view model may also be responsible for defining logical state changes that affect some aspect of the display in the view, such as an indication that some operation is pending.
+
+The view is data-bound to the view model. Updates to the view model are automatically reflected in the view. The view model also gets events from the view, such as button clicks.
+
+
+Solid principles in C#--->>>
+Intro to SOLID principles
+
+SOLID principles are the design principles that enable us to manage with most of the software design problems. Robert C. Martin compiled these principles in the 1990s. These principles provide us ways to move from tightly coupled code and little encapsulation to the desired results of loosely coupled and encapsulated real needs of a business properly. SOLID is an acronym of the following.
+
+S: Single Responsibility Principle (SRP)
+O: Open closed Principle (OSP)
+L: Liskov substitution Principle (LSP)
+I: Interface Segregation Principle (ISP)
+D: Dependency Inversion Principle (DIP)
+
+Append List into List
+List<string> initialList = new List<string>();
+// Put whatever you want in the initial list
+List<string> listToAdd = new List<string>();
+// Put whatever you want in the second list
+initialList.AddRange(listToAdd);
+
+Repository Pattern:
+http://deviq.com/repository-pattern/
+
+**********************************IComparable vs IComparer Interface---->
+**********************************AS read Only
+**********************************TrimExcess
+**********************************
+

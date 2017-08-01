@@ -1,0 +1,31 @@
+*****var in c#**********
+
+Beginning in Visual C# 3.0, variables that are declared at method scope 
+can have an implicit "type" var. An implicitly typed local variable is strongly typed just as 
+if you had declared the type yourself, but the compiler determines the type.
+The following two declarations of i are functionally equivalent:
+var i = 10; // implicitly typed  
+int i = 10; //explicitly typed  
+
+
+*****void in c#**********
+When used as the return type for a method, void specifies that the method doesn't return a value.
+void isn't allowed in the parameter list of a method. 
+A method that takes no parameters and returns no value is declared as follows:
+public void SampleMethod()
+{
+    // Body of the method.
+}
+void is also used in an unsafe context to declare a pointer to an unknown type. 
+void is an alias for the .NET Framework System.Void type.
+
+*****Access Modifier in c#**********
+Abstract:The abstract modifier indicates that the thing being modified has a missing or incomplete implementation. 
+The abstract modifier can be used with classes, methods, properties, indexers,
+and events. Use the abstract modifier in a class declaration to indicate that a class is 
+intended only to be a base class of other classes. Members marked as abstract, or included in an abstract class, 
+must be implemented by classes that derive from the abstract class.
+
+
+***********************************************************************
+https://www.agilealliance.org/

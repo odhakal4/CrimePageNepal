@@ -1,0 +1,32 @@
+<html ng-app="countryApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular_Country_Example6</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="angular.js"></script>
+    <script>
+      var countryApp = angular.module('countryApp', []);
+      countryApp.controller('countryController', function ($scope){
+        $scope.countries = [
+          {"name": "China", "population": 1359821000},
+          {"name": "India", "population": 1205625000},
+          {"name": "United States of America","population": 312247000},
+          {"name":"Nepal","population":234213456}
+        ];
+      });
+    </script>
+  </head>
+  <body ng-controller="countryController">
+    <div class="container well">
+    <ul>
+      <li ng-repeat="country in countries">{{country.name}} ---- population {{country.population}}</li>
+    </ul>
+  </div>
+  </body>
+</html>

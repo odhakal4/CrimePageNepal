@@ -1,0 +1,37 @@
+<html ng-app="nameApp">
+<head>
+	<meta charset="utf-8">
+	<title>Angular3_Example</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <script src="angular.js"></script>
+    <script>
+    <!-- Changing scope values asynchronously - updates dont propagate without dot apply method -->
+var nameApp = angular.module('nameApp', []);
+      nameApp.controller('nameCtrl', function ($scope){
+        $scope.firstName = 'OmPrakash';
+
+        $scope.$watch('lastName', function(newValue, oldValue){
+          console.log('new value is ' + newValue);
+        });
+
+        setTimeout(function(){
+          $scope.lastName = 'Dhakal';
+        }, 1000);
+      });
+    </script>
+</head>
+<body ng-controller="nameCtrl">
+    <div class="container well">
+    FirstName:<input type="text" ng-model="firstName">
+    <br/>
+    LastName:<input type="text" ng-model="lastName">
+    <br>
+    Hello {{firstName}} {{lastName}}
+    </div>
+</html>

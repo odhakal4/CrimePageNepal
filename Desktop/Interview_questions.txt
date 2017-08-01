@@ -1,0 +1,12 @@
+oop---depth
+asp.net--->func,
+bootstrap
+javascript----closure,callback
+jquery--------selector
+Ajax---------
+MVC----------------filters,
+webApi--
+Anjular Js---------routing
+EntityFramework-----async and await,
+DesignPatterns----
+C#---------------
